@@ -1,0 +1,6 @@
+.env
+env/
+__pycache__/
+*.pyc
+*.pyo
+fine_tuned_gpt2_qa/
