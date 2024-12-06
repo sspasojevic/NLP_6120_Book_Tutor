@@ -25,7 +25,7 @@ def query_hf_mistral(prompt, api_url=MISTRAL_API_URL):
     headers = {"Authorization": f"Bearer {HF_API_TOKEN}"}
     
     prompt = "<s>[INST]" + prompt + " [/INST] Model answer</s>"
-    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 300, "temperature": 0.8, "return_full_text": False }} # can play with these variables here
+    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 500, "temperature": 0.8, "return_full_text": False }} # can play with these variables here
     response = requests.post(api_url, headers=headers, json=payload)
 
     if response.status_code != 200:
@@ -53,7 +53,7 @@ def query_hf_phi(prompt, api_url=PHI_API_URL):
     headers = {"Authorization": f"Bearer {HF_API_TOKEN}"}
     
     prompt = prompt + "\n\nOutput:"
-    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 300, "temperature": 0.2, "return_full_text": False }}
+    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 500, "temperature": 0.2, "return_full_text": False }}
     response = requests.post(api_url, headers=headers, json=payload)
 
     if response.status_code != 200:
@@ -81,7 +81,7 @@ def query_hf_qwen(prompt, api_url=QWEN_API_URL):
     headers = {"Authorization": f"Bearer {HF_API_TOKEN}"}
     
     prompt = "<|im_start|>system\n" + prompt + "<|im_end|>\n<|im_start|>user\n<|im_end|>\n<|im_start|>assistant\n"
-    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 300, "temperature": 0.2, "return_full_text": False }}
+    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 500, "temperature": 0.2, "return_full_text": False }}
     response = requests.post(api_url, headers=headers, json=payload)
 
     if response.status_code != 200:
