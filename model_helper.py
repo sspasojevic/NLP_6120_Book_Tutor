@@ -37,7 +37,7 @@ def query_hf_mistral(prompt, api_url=MISTRAL_API_URL):
     payload = {
         "inputs": prompt,
         "parameters": {
-            "max_new_tokens": 300,    # Maximum number of tokens to generate
+            "max_new_tokens": 500,    # Maximum number of tokens to generate
             "temperature": 0.8,       # Sampling temperature for diversity
             "return_full_text": False # Whether to return the full text including the prompt
         }
@@ -84,7 +84,7 @@ def query_hf_phi(prompt, api_url=PHI_API_URL):
     payload = {
         "inputs": prompt,
         "parameters": {
-            "max_new_tokens": 300,    # Maximum number of tokens to generate
+            "max_new_tokens": 500,    # Maximum number of tokens to generate
             "temperature": 0.2,       # Sampling temperature for less randomness
             "return_full_text": False # Whether to return the full text including the prompt
         }
@@ -134,7 +134,7 @@ def query_hf_qwen(prompt, api_url=QWEN_API_URL):
     payload = {
         "inputs": prompt,
         "parameters": {
-            "max_new_tokens": 300,    # Maximum number of tokens to generate
+            "max_new_tokens": 500,    # Maximum number of tokens to generate
             "temperature": 0.2,       # Sampling temperature for less randomness
             "return_full_text": False # Whether to return the full text including the prompt
         }
