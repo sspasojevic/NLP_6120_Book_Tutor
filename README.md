@@ -1,3 +1,6 @@
+# Current project implementation via Gradio
+https://huggingface.co/spaces/utkarshgogna1/Gradio_APP
+
 # Project Setup Instructions
 
 This document outlines the steps required to set up the project environment, install dependencies, and configure the necessary API token.
