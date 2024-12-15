@@ -1,5 +1,6 @@
 # Current project implementation via Gradio
 https://huggingface.co/spaces/utkarshgogna1/Gradio_APP
+(uses shared resources and it takes time to load and process)
 
 # Project Setup Instructions
 
